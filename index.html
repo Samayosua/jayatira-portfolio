@@ -1,0 +1,272 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JAYATIRA | Portofolio Guru</title>
+<meta name="description" content="Website portofolio pribadi JAYATIRA, profil profesional guru, pendidikan, pengalaman dan karya pembelajaran.">
+
+<style>
+:root {
+  --navy: #102b50;
+  --blue: #2563eb;
+  --light: #eff6ff;
+  --white: #ffffff;
+  --text: #26364b;
+}
+* {margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+body {
+  font-family: Arial, sans-serif;
+  color:var(--text);
+  background:#f8fafc;
+  line-height:1.7;
+}
+header {
+  background:var(--navy);
+  color:white;
+  padding:16px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+.logo {font-size:25px;font-weight:bold;letter-spacing:2px}
+nav {display:flex;gap:22px}
+nav a {color:white;text-decoration:none;font-size:14px}
+nav a:hover {color:#93c5fd}
+.menu {display:none;background:none;border:0;color:white;font-size:25px}
+.hero {
+  min-height:570px;
+  background:linear-gradient(120deg,#102b50,#2563eb);
+  color:white;
+  display:flex;
+  align-items:center;
+  padding:75px 10%;
+  gap:50px;
+}
+.hero-content {flex:1}
+.hero h1 {font-size:52px;line-height:1.2;margin:12px 0}
+.hero h1 span {color:#93c5fd}
+.hero p {max-width:550px;margin:18px 0;color:#e0eaff}
+.hero-image {
+  width:260px;height:260px;border-radius:50%;
+  background:#dbeafe;border:7px solid white;
+  display:flex;align-items:center;justify-content:center;
+  color:#1e3a8a;text-align:center;padding:20px;
+  overflow:hidden;
+}
+.hero-image img {width:100%;height:100%;object-fit:cover}
+.btn {
+  display:inline-block;background:white;color:var(--navy);
+  padding:12px 24px;border-radius:7px;
+  text-decoration:none;font-weight:bold;margin-top:12px;
+}
+section {padding:75px 9%}
+.section-title {text-align:center;margin-bottom:40px}
+.section-title h2 {font-size:32px;color:var(--navy)}
+.section-title p {color:#64748b}
+.about {
+  display:grid;grid-template-columns:1fr 1fr;gap:35px;
+  align-items:center;
+}
+.about-card,.card {
+  background:white;padding:27px;border-radius:13px;
+  box-shadow:0 5px 22px #0f172a0c;
+}
+.about-card h3,.card h3 {color:var(--navy);margin-bottom:12px}
+.info {margin-top:15px}
+.info p {padding:7px 0;border-bottom:1px solid #e2e8f0}
+.grid {
+  display:grid;grid-template-columns:repeat(3,1fr);gap:22px;
+}
+.card {border-top:4px solid var(--blue)}
+.card p {color:#64748b;font-size:14px}
+.card .symbol {font-size:32px;margin-bottom:12px}
+.skills {display:flex;flex-wrap:wrap;gap:12px}
+.skills span {
+  background:#dbeafe;color:#1e40af;
+  padding:9px 17px;border-radius:30px;font-size:14px;
+}
+.contact {background:var(--light)}
+.contact-box {max-width:650px;margin:auto;text-align:center}
+footer {
+  background:var(--navy);color:white;text-align:center;
+  padding:25px;font-size:14px;
+}
+@media(max-width:800px) {
+  nav {
+    display:none;position:absolute;top:65px;left:0;
+    width:100%;background:var(--navy);
+    flex-direction:column;padding:20px 8%;
+  }
+  nav.show {display:flex}
+  .menu {display:block}
+  .hero {flex-direction:column-reverse;text-align:center;padding:55px 7%}
+  .hero h1 {font-size:38px}
+  .hero-image {width:210px;height:210px}
+  .about {grid-template-columns:1fr}
+  .grid {grid-template-columns:1fr}
+  section {padding:55px 7%}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">JAYATIRA.</div>
+  <button class="menu" onclick="toggleMenu()">☰</button>
+  <nav id="nav">
+    <a href="#home" onclick="closeMenu()">Beranda</a>
+    <a href="#profil" onclick="closeMenu()">Profil</a>
+    <a href="#pendidikan" onclick="closeMenu()">Pendidikan</a>
+    <a href="#keahlian" onclick="closeMenu()">Keahlian</a>
+    <a href="#portofolio" onclick="closeMenu()">Portofolio</a>
+    <a href="#kontak" onclick="closeMenu()">Kontak</a>
+  </nav>
+</header>
+
+<div class="hero" id="home">
+  <div class="hero-content">
+    <p>SELAMAT DATANG DI WEBSITE PORTOFOLIO SAYA</p>
+    <h1>Halo, Saya <span>JAYATIRA</span></h1>
+    <h3>Guru | Pendidik | Pembelajar</h3>
+    <p>
+      Selamat datang di ruang digital pribadi saya.
+      Website ini menjadi tempat untuk mengenal profil,
+      perjalanan pendidikan, pengalaman, serta karya
+      dalam dunia pendidikan.
+    </p>
+    <a href="#profil" class="btn">Kenali Saya</a>
+  </div>
+  <div class="hero-image">
+    <span>Tempatkan foto profil Anda di sini</span>
+  </div>
+</div>
+
+<section id="profil">
+  <div class="section-title">
+    <h2>Tentang Saya</h2>
+    <p>Mengenal lebih dekat profil pribadi dan profesional</p>
+  </div>
+  <div class="about">
+    <div>
+      <h3>Profil Profesional</h3>
+      <p>
+        Saya adalah seorang guru yang memiliki semangat
+        dalam dunia pendidikan, pengembangan potensi peserta
+        didik, dan pemanfaatan teknologi dalam pembelajaran.
+        Melalui website ini saya membagikan perjalanan dan
+        karya saya di bidang pendidikan.
+      </p>
+    </div>
+    <div class="about-card">
+      <h3>Informasi Pribadi</h3>
+      <div class="info">
+        <p><b>Nama:</b> JAYATIRA</p>
+        <p><b>Profesi:</b> Guru</p>
+        <p><b>Bidang:</b> Pendidikan</p>
+        <p><b>Email:</b> [Masukkan email]</p>
+        <p><b>Alamat:</b> [Masukkan alamat]</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pendidikan">
+  <div class="section-title">
+    <h2>Riwayat Pendidikan</h2>
+    <p>Perjalanan pendidikan dan pengembangan diri</p>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <div class="symbol">🎓</div>
+      <h3>Pendidikan Dasar</h3>
+      <p>[Nama sekolah dan tahun]</p>
+    </div>
+    <div class="card">
+      <div class="symbol">📚</div>
+      <h3>Pendidikan Menengah</h3>
+      <p>[Nama sekolah dan tahun]</p>
+    </div>
+    <div class="card">
+      <div class="symbol">🏫</div>
+      <h3>Pendidikan Tinggi</h3>
+      <p>[Nama perguruan tinggi dan tahun]</p>
+    </div>
+  </div>
+</section>
+
+<section id="keahlian">
+  <div class="section-title">
+    <h2>Keahlian</h2>
+    <p>Kompetensi dan kemampuan profesional</p>
+  </div>
+  <div class="skills">
+    <span>Pengajaran</span>
+    <span>Manajemen Kelas</span>
+    <span>Perencanaan Pembelajaran</span>
+    <span>Media Pembelajaran Digital</span>
+    <span>Teknologi Pendidikan</span>
+    <span>Komunikasi</span>
+    <span>Kerja Sama</span>
+  </div>
+</section>
+
+<section id="portofolio">
+  <div class="section-title">
+    <h2>Portofolio Karya</h2>
+    <p>Dokumentasi kegiatan dan hasil karya pendidikan</p>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <div class="symbol">⚽</div>
+      <h3>Media Pembelajaran PJOK</h3>
+      <p>Dokumentasi media pembelajaran olahraga dan aktivitas siswa.</p>
+    </div>
+    <div class="card">
+      <div class="symbol">💻</div>
+      <h3>Media Digital</h3>
+      <p>Pengembangan media pembelajaran berbasis teknologi.</p>
+    </div>
+    <div class="card">
+      <div class="symbol">📸</div>
+      <h3>Kegiatan Sekolah</h3>
+      <p>Dokumentasi kegiatan pendidikan dan pembelajaran.</p>
+    </div>
+  </div>
+</section>
+
+<section id="kontak" class="contact">
+  <div class="contact-box">
+    <div class="section-title">
+      <h2>Hubungi Saya</h2>
+      <p>Mari menjalin komunikasi dan kerja sama</p>
+    </div>
+    <p>Email: [Masukkan email Anda]</p>
+    <p>WhatsApp: [Masukkan nomor WhatsApp]</p>
+    <a class="btn" href="mailto:emailanda@example.com">
+      Kirim Email
+    </a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 JAYATIRA | Personal Portfolio</p>
+  <p>Belajar, Berkarya, dan Menginspirasi.</p>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById("nav").classList.toggle("show");
+}
+function closeMenu() {
+  document.getElementById("nav").classList.remove("show");
+}
+</script>
+
+</body>
+</html>
